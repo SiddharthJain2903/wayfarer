@@ -1,0 +1,41 @@
+:root{--bg:#f6f3ee;--card:#fff;--ink:#1d2433;--mut:#6b7385;--line:#e8e3da;--acc:#e8643c;--acc2:#1f8a8a;--soft:#fdeee8;--sh:0 6px 24px rgba(30,30,50,.07)}
+@media(prefers-color-scheme:dark){:root{--bg:#12151d;--card:#1b2030;--ink:#eef0f6;--mut:#99a1b5;--line:#2a3045;--soft:#3a2420;--sh:none;color-scheme:dark}}
+*{box-sizing:border-box}html,body{margin:0}
+body{background:var(--bg);color:var(--ink);font:15px/1.5 Inter,system-ui,-apple-system,"Segoe UI",sans-serif}
+h1,h2,h3{font-family:Georgia,"Times New Roman",serif;margin:0;font-weight:600}
+.app{display:flex;min-height:100vh}
+aside{width:220px;padding:22px 16px;border-right:1px solid var(--line);position:sticky;top:0;height:100vh;display:flex;flex-direction:column;gap:6px}
+.logo{font:600 22px Georgia,serif;margin-bottom:18px}.logo span{color:var(--acc)}
+.nav{all:unset;cursor:pointer;padding:10px 12px;border-radius:10px;color:var(--mut);font-weight:500}
+.nav:hover,.nav.on{background:var(--soft);color:var(--acc)}
+main{flex:1;padding:28px 32px;max-width:1100px;min-width:0}
+.top{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:22px}
+.btn{border:0;cursor:pointer;background:var(--acc);color:#fff;padding:10px 18px;border-radius:12px;font:600 14px inherit;font-family:inherit}
+.btn.g{background:transparent;color:var(--ink);border:1px solid var(--line)}.btn.s{padding:6px 12px;font-size:13px}
+.hero{background:linear-gradient(120deg,#e8643c,#f2a65a 55%,#1f8a8a);color:#fff;border-radius:22px;padding:30px;margin-bottom:22px}
+.hero h1{font-size:30px}.hero p{margin:8px 0 16px;opacity:.92;max-width:520px}.hero .btn{background:#fff;color:#c4492a}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:14px;margin-bottom:24px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:18px;box-shadow:var(--sh)}
+.err{border-color:var(--acc);color:var(--acc);margin-bottom:16px}
+.stat b{display:block;font:600 26px Georgia,serif}.stat span{color:var(--mut);font-size:13px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:16px}
+.trip{cursor:pointer;transition:transform .15s}.trip:hover{transform:translateY(-3px)}
+.em{font-size:34px}.mut{color:var(--mut);font-size:13px}
+.tag{display:inline-block;background:var(--soft);color:var(--acc);border-radius:99px;padding:2px 10px;font-size:12px;margin:6px 4px 0 0}
+form.card{display:grid;grid-template-columns:1fr 1fr;gap:16px}form .w{grid-column:1/-1}
+label{font-size:13px;color:var(--mut);font-weight:600;display:block;margin-bottom:5px}
+input,select{width:100%;padding:10px 12px;border-radius:10px;border:1px solid var(--line);background:var(--bg);color:var(--ink);font:inherit}
+.chips{display:flex;flex-wrap:wrap;gap:8px}.chip{padding:8px 14px;border-radius:99px;border:1px solid var(--line);cursor:pointer;user-select:none}
+.chip.on{background:var(--acc);color:#fff;border-color:var(--acc)}
+.tabs{display:flex;gap:8px;overflow-x:auto;margin:16px 0}.tabs .chip{white-space:nowrap}
+.layout{display:grid;grid-template-columns:1fr 280px;gap:18px;align-items:start}
+.item{display:flex;gap:14px;padding:14px 0;border-bottom:1px dashed var(--line)}.item:last-child{border:0}
+.time{width:64px;color:var(--acc2);font-weight:600;font-size:13px;flex:none}
+.item .i{flex:1}.item b{display:block}.x{all:unset;cursor:pointer;color:var(--mut);padding:2px 6px}.x:hover{color:var(--acc)}
+.k{font-size:11px;text-transform:uppercase;letter-spacing:.06em;color:var(--acc2);font-weight:700}
+.row{display:flex;justify-content:space-between;padding:6px 0}.tot{border-top:1px solid var(--line);margin-top:6px;padding-top:10px;font:600 20px Georgia,serif}
+.load{text-align:center;padding:60px;color:var(--mut)}
+@media(max-width:800px){
+  aside{position:fixed;bottom:0;left:0;right:0;top:auto;height:auto;width:100%;flex-direction:row;justify-content:space-around;background:var(--card);z-index:5;border-top:1px solid var(--line);border-right:0;padding:8px}
+  .logo{display:none}main{padding:18px 16px 90px}.layout{grid-template-columns:1fr}form.card{grid-template-columns:1fr}
+}
